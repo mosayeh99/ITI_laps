@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Worker</title>
+    <style>
+        section {
+            width: 500px;
+            margin: 100px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        button {
+            border: 0;
+            background-color: dodgerblue;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Web Worker</h1>
+        <div>
+            <button id="sum">Sum</button>
+            <button id="bg">Bg change</button>
+        </div>
+    </section>
+
+    <script>
+        var worker = new Worker("worker.js");
+        var sum = document.getElementById("sum");
+        var bg = document.getElementById("bg");
+        sum.onclick = function(){
+            worker.postMessage("");
+        }
+
+        worker.onmessage = function(message){
+            console.log(message);
+            alert(message.data)
+        }
+
+        bg.onclick = function(){
+            if(document.body.style.backgroundColor !== "green"){
+                document.body.style.backgroundColor = "green"
+            }
+            else {
+                document.body.style.backgroundColor = "blue"
+            }
+        }
+    </script>
+</body>
+</html>

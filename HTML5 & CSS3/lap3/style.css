@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* --------------Image Section---------------- */
+.img-sec {
+    width: 500px;
+    margin: 100px auto;
+}
+
+.img-sec img {
+    width: 100%;
+    transition: 3s linear;
+}
+
+.img-sec img:hover {
+    opacity: 0;
+}
+
+/* -------------Form Section------------------ */
+form {
+    width: 670px;
+    margin: 100px auto;
+    border: 2px solid dodgerblue;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form input {
+    background-color: #eee;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    outline: 0;
+}
+
+form p {
+    padding-left: 10px;
+    padding-top: 3px;
+    color: red;
+    display: none;
+}
+
+form button {
+    background-color: dodgerblue;
+    color: white;
+    padding: 10px;
+    width: 100px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* ---------------Hover Button-------------- */
+.btn-sec {
+    width: 500px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-sec button {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: dodgerblue;
+    box-shadow: 1px 1px 15px 8px rgba(30 144 225 / 0.6);
+}
+
+.btn-sec button:hover {
+    animation: btnShow 10s alternate infinite linear;
+}
+
+@keyframes btnShow {
+    0% {
+        background-color: dodgerblue;
+        box-shadow: 1px 1px 15px 8px rgba(30 144 225 / 0.6);
+    }
+    25% {
+        background-color: red;
+        box-shadow: 1px 1px 15px 8px rgba(225 0 0 / 0.6);
+    }
+    50% {
+        background-color: tan;
+        box-shadow: 1px 1px 15px 8px rgba(210 180 140 / 0.6);
+    }
+    100% {
+        background-color: blueviolet;
+        box-shadow: 1px 1px 15px 8px rgba(138 43 226 / 0.6);
+    }
+}

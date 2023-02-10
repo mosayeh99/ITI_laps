@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.MathJax = {
+            MathML: { extensions: ["mml3.js", "content-mathml.js"] },
+        };
+    </script>
+    <script
+        type="text/javascript"
+        async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=MML_HTMLorMML"
+    ></script>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <form action="">
+        Red: <input type="range" class="red-range" step="1" value="0" min="0" max="255" oninput="redRangeValue(this.value)"><br>
+        Green: <input type="range" class="green-range" step="1" value="0" min="0" max="255" oninput="greenRangeValue(this.value)"><br>
+        Blue: <input type="range" class="blue-range" step="1" value="0" min="0" max="255" oninput="blueRangeValue(this.value)">
+        <p class="colored-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus libero earum sint minima deleniti optio
+            ut quis dolore voluptas, atque accusamus quaerat culpa quia doloremque ipsam obcaecati excepturi enim velit.
+        </p>
+    </form>
+
+    <section class="video-sec">
+        <video src="assets/frozen.mp4" width="800"></video>
+        <div class="controls">
+            <div class="video-duration">
+                <input type="range" class="video-range" min="0" oninput="videoTimeRange()">
+            </div>
+            <i class="fa-solid fa-play" onclick="playVideo()"></i>
+            <i class="fa-solid fa-pause" onclick="pauseVideo()"></i>
+            <i class="fa-solid fa-angles-left" onclick="videoStart()"></i>
+            <i class="fa-solid fa-arrow-rotate-left" onclick="previous5seconds()"></i>
+            <i class="fa-solid fa-arrow-rotate-right" onclick="next5seconds()"></i>
+            <i class="fa-solid fa-angles-right" onclick="videoEnd()"></i>
+            <i class="fa-solid fa-volume-high" onclick="muteVideo()"></i>
+            <input type="range" class="volume-range" step="0.1" min="0" max="1" value="0.3" oninput="volumeVideo(this.value)">
+            <i class="fa-solid fa-volume-xmark" onclick="unmuteVideo()"></i>
+            <i class="fa-solid fa-gauge"></i>
+            <input type="range" class="speed-range" step="0.25" min="0.25" max="2" value="1" oninput="speedVideo(this.value)">
+            <div class="video-time">
+                <span class="video-live-time"></span>
+                <span>/</span>
+                <span class="video-full-time"></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="math-sec">
+        <svg height="210" width="500">
+            <polygon points="250,10 250,250 160,210" style="fill:lime" />
+        </svg>
+        <span>b</span>
+        <span>c</span>
+        <span>a</span>
+    </section>
+    <math display="block">
+        <mn>c</mn>
+        <mo>=</mo>
+        <msqrt>
+            <msup>
+                <mn>a</mn>
+                <mn>2</mn>
+            </msup>
+            <mo>+</mo>
+            <msup>
+                <mn>b</mn>
+                <mn>2</mn>
+            </msup>
+        </msqrt>
+    </math>
+    <section class="canva-sec">
+        <canvas width="400" height="400" style="border:2px solid red" id="canv"></canvas>
+    </section>
+    <script src="main.js"></script>
+</body>
+
+</html>

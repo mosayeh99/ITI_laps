@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoLocation</title>
+    <style>
+        section {
+            width: 500px;
+            margin: 100px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button {
+            width: 200px;
+            border: 0;
+            background-color: dodgerblue;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <button onclick="getLocation()">Detect My Location</button>
+    </section>
+
+    <script>
+        function getLocation() {
+            navigator.geolocation.getCurrentPosition(showPosition,showError,Options);
+        }
+        function showPosition(e) {
+            let lat = e.coords.latitude;
+            let long = e.coords.longitude;
+            location.assign("http://maps.google.com/maps?q=" + lat +",+" + long);
+        }
+        function showError(x){
+        switch(x.code){
+            case 0:
+            console.log(x.message);
+            break;
+            case 1:
+            console.log(x.message);
+            break;
+            case 2:
+            console.log(x.message);
+            break;
+            case 3:
+            console.log(x.message,x.code);
+            break;
+        }
+    }
+    let Options={
+        timeout:3000,
+        enableHighAccuracy: true,
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -----------------Change color of paragraph------------- */
+form {
+    width: 500px;
+    margin: 100px auto;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+form .colored-p {
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+/* -----------------Video controls-------------------- */
+.video-sec {
+    position: relative;
+    width: 800px;
+    margin: 100px auto;
+    overflow: hidden;
+}
+
+.video-sec:hover .controls {
+    bottom: 4px;
+}
+
+.video-sec .controls {
+    position: absolute;
+    background-color: white;
+    bottom: -30px;
+    width: 100%;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.video-duration .video-range {
+    width: 780px;
+    margin-bottom: 5px;
+}
+
+.video-sec .video-time {
+    display: inline-block;
+    position: absolute;
+    right: 8px;
+}
+
+/* -----------------------Math section------------------- */
+.math-sec {
+    width: 500px;
+    margin: 100px auto;
+    position: relative;
+}
+
+.math-sec svg polygon {
+
+}
+
+.math-sec span {
+    position: absolute;
+}
+
+.math-sec span:first-of-type {
+    right: 220px;
+    top: 100px;
+}
+
+.math-sec span:nth-of-type(2) {
+    right: 350px;
+    top: 100px;
+}
+
+.math-sec span:nth-of-type(3) {
+    right: 290px;
+    top: 225px;
+}
+
+/* ------------------------canva section--------------------- */
+.canva-sec {
+    width: 500px;
+    margin: 100px auto;
+}
