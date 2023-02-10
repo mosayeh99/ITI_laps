@@ -1,0 +1,75 @@
+/* --------------- Start RoadMap Page ---------------*/
+section {
+    padding: 20px;
+}
+
+.core {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.core .col {
+    flex-basis: 50%;
+}
+
+/* --------------- Start Form Page ---------------*/
+table {
+    width: 700px;
+    max-width: 100%;
+    margin: 20px auto;
+    border: 2px solid #901B20;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+table tr {
+    display: flex;
+    justify-content: space-between;
+}
+
+table input:not([type="checkbox"], [type="number"], [type="submit"], [type="reset"]),
+table select {
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 8px;
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+table select option {
+    text-align: center;
+}
+
+table textarea {
+    background-color: #eee;
+    border-radius: 5px;
+    height: 70px;
+    width: 400px;
+}
+
+table [type="number"] {
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 8px;
+    width: 130px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.btns {
+    display: flex;
+    gap: 20px;
+    width: fit-content;
+    margin: 20px auto 0;
+}
+
+.btns input {
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.required {
+    color: red;
+}
