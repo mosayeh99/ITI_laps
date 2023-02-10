@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <img src="../imgs/ITI_logo.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="../index.html" target="_parent">Home</a></li>
+                <li><a href="roadmap.html">Road Map</a></li>
+                <li><a href="form.html">Registration Form</a></li>
+                <li><a href="https://iti.gov.eg">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+        <table>
+            <form action="">
+                <tr><td colspan="2"><h1>Register - Create Account</h1></td></tr>
+                <tr><td colspan="2"><p>Filed marked with <span class="required">*</span> are required</p></td></tr>
+                <tr>
+                    <td>Name <span class="required">*</span></td>
+                    <td><input type="text" required></td>
+                </tr>
+                <tr>
+                    <td>Email <span class="required">*</span></td>
+                    <td><input type="email" required></td>
+                </tr>
+                <tr>
+                    <td>Alternate Email</td>
+                    <td><input type="email" required></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Phone <span class="required">*</span></td>
+                    <td style="margin-right: 55px;">country code - City Code- Phone Number</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="number" required><input type="number" required><input type="number" required></td>
+                </tr>
+                <tr>
+                    <td>Mobile Phone <span class="required">*</span></td>
+                    <td><input type="phone" required></td>
+                </tr>
+                <tr>
+                    <td>Postal Address <span class="required">*</span></td>
+                    <td><textarea required></textarea></td>
+                </tr>
+                <tr>
+                    <td>Country <span class="required">*</span></td>
+                    <td>
+                        <select name="country" required>
+                            <option selected disabled>-------------------- Select One --------------------<option>
+                            <option value="Egypt">Egypt</option>
+                            <option value="U.S">U.S</option>
+                            <option value="Paris">Paris</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password <span class="required">*</span></td>
+                    <td><input type="password" required></td>
+                </tr>
+                <tr>
+                    <td>Re-Enter Password <span class="required">*</span></td>
+                    <td><input type="password" required></td>
+                </tr>
+                <tr>
+                    <td  colspan="2">
+                        <label>
+                            <input type="checkbox">
+                            I accept the <a href="#">Terms of Use</a>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td  colspan="2" class="btns">
+                        <input type="submit" value="Continue >>">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </form>
+        </table>
+</body>
+</html>
