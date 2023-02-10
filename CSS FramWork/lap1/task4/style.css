@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #3bbced;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    width: 500px;
+    height: 500px;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    transform: rotate(-30deg);
+}
+
+main div {
+    background-color: #333333;
+}
+
+.child1 {
+    grid-row: span 2;
+}
+
+.child2 {
+    grid-column: 2/4;
+}
+
+.child4 {
+    grid-row: span 2;
+}
+
+.child5 {
+    grid-column: span 2;
+}
